@@ -3,16 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91E4F9C48E3E6BF0BF5DD26B /* Pods_PhotosInfiniteScrolling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CF2580660E8CCD0C81F1A6 /* Pods_PhotosInfiniteScrolling.framework */; };
+		957935F1268648CC00F8A241 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F0268648CC00F8A241 /* PhotosViewController.swift */; };
+		957935F32686540300F8A241 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F22686540300F8A241 /* PhotoCell.swift */; };
 		958108672685D4ED006AC6DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108662685D4ED006AC6DC /* AppDelegate.swift */; };
 		958108702685D4EF006AC6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9581086F2685D4EF006AC6DC /* Assets.xcassets */; };
 		958108732685D4EF006AC6DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958108712685D4EF006AC6DC /* LaunchScreen.storyboard */; };
 		9581087E2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581087D2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift */; };
 		958108982685D6A9006AC6DC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108972685D6A9006AC6DC /* AppCoordinator.swift */; };
 		9581089B2685D848006AC6DC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581089A2685D848006AC6DC /* Coordinator.swift */; };
+		958108AC2685E00D006AC6DC /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108AB2685E00D006AC6DC /* Dimensions.swift */; };
+		958108AE2685E0E9006AC6DC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108AD2685E0E9006AC6DC /* Extensions.swift */; };
+		958108B02685E53C006AC6DC /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108AF2685E53C006AC6DC /* APIKeys.swift */; };
+		958108B22685E571006AC6DC /* BaseURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108B12685E571006AC6DC /* BaseURLs.swift */; };
+		958108B72685E5ED006AC6DC /* UnsplashEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108B62685E5ED006AC6DC /* UnsplashEndpoints.swift */; };
+		958108BA2685E667006AC6DC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108B92685E667006AC6DC /* NetworkError.swift */; };
+		958108BD2685E6C9006AC6DC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108BC2685E6C9006AC6DC /* NetworkClient.swift */; };
+		958108C02685EEDB006AC6DC /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108BF2685EEDB006AC6DC /* UnsplashPhoto.swift */; };
+		958108C22685F02D006AC6DC /* DataToImageConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108C12685F02D006AC6DC /* DataToImageConversionService.swift */; };
+		958108C42685F118006AC6DC /* DataLoadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108C32685F118006AC6DC /* DataLoadingService.swift */; };
+		958108C62685F433006AC6DC /* UnsplashPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108C52685F433006AC6DC /* UnsplashPhotoService.swift */; };
+		958108CB2685F98E006AC6DC /* PhotosCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108CA2685F98E006AC6DC /* PhotosCoordinator.swift */; };
+		958108CD2685FBA2006AC6DC /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108CC2685FBA2006AC6DC /* PhotosViewModel.swift */; };
+		B0A273AAC4AF1F247A8B8553 /* Pods_PhotosInfiniteScrollingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2410BA884E0E9A10FA105798 /* Pods_PhotosInfiniteScrollingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2410BA884E0E9A10FA105798 /* Pods_PhotosInfiniteScrollingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotosInfiniteScrollingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25CF2580660E8CCD0C81F1A6 /* Pods_PhotosInfiniteScrolling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotosInfiniteScrolling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47943FD914B5F182F464479A /* Pods-PhotosInfiniteScrolling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrolling.debug.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling.debug.xcconfig"; sourceTree = "<group>"; };
+		957935F0268648CC00F8A241 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		957935F22686540300F8A241 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosInfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958108662685D4ED006AC6DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9581086F2685D4EF006AC6DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +58,22 @@
 		9581087F2685D4EF006AC6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958108972685D6A9006AC6DC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9581089A2685D848006AC6DC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		958108AB2685E00D006AC6DC /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		958108AD2685E0E9006AC6DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		958108AF2685E53C006AC6DC /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		958108B12685E571006AC6DC /* BaseURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLs.swift; sourceTree = "<group>"; };
+		958108B62685E5ED006AC6DC /* UnsplashEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashEndpoints.swift; sourceTree = "<group>"; };
+		958108B92685E667006AC6DC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		958108BC2685E6C9006AC6DC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		958108BF2685EEDB006AC6DC /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
+		958108C12685F02D006AC6DC /* DataToImageConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToImageConversionService.swift; sourceTree = "<group>"; };
+		958108C32685F118006AC6DC /* DataLoadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingService.swift; sourceTree = "<group>"; };
+		958108C52685F433006AC6DC /* UnsplashPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoService.swift; sourceTree = "<group>"; };
+		958108CA2685F98E006AC6DC /* PhotosCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCoordinator.swift; sourceTree = "<group>"; };
+		958108CC2685FBA2006AC6DC /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		9E9C46B3B49B8F0CCEFFD4B5 /* Pods-PhotosInfiniteScrollingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrollingTests.release.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrollingTests/Pods-PhotosInfiniteScrollingTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1FFE287123D642962BE791F /* Pods-PhotosInfiniteScrollingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrollingTests.debug.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrollingTests/Pods-PhotosInfiniteScrollingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF73EB9DE5116DFB343F52FF /* Pods-PhotosInfiniteScrolling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrolling.release.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E4F9C48E3E6BF0BF5DD26B /* Pods_PhotosInfiniteScrolling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A273AAC4AF1F247A8B8553 /* Pods_PhotosInfiniteScrollingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +102,8 @@
 				958108652685D4ED006AC6DC /* PhotosInfiniteScrolling */,
 				9581087C2685D4EF006AC6DC /* PhotosInfiniteScrollingTests */,
 				958108642685D4ED006AC6DC /* Products */,
+				AF291C8EFC5B3E004B556AAA /* Pods */,
+				CC52115D8513457B6027A3ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +121,9 @@
 			children = (
 				958108962685D626006AC6DC /* ApplicationLayer */,
 				958108992685D830006AC6DC /* Presentation Layer */,
-				9581086F2685D4EF006AC6DC /* Assets.xcassets */,
-				958108712685D4EF006AC6DC /* LaunchScreen.storyboard */,
-				958108742685D4EF006AC6DC /* Info.plist */,
+				958108A32685DE9F006AC6DC /* Business Logic Layer */,
+				958108A62685DEEA006AC6DC /* Core Layer */,
+				958108A72685DEFE006AC6DC /* Supporting Files */,
 			);
 			path = PhotosInfiniteScrolling;
 			sourceTree = "<group>";
@@ -116,6 +158,8 @@
 		9581089C2685D91D006AC6DC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9581089E2685DC92006AC6DC /* Photos */,
+				9581089F2685DC9B006AC6DC /* Photo Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -128,6 +172,207 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		9581089E2685DC92006AC6DC /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				958108A22685DCCD006AC6DC /* View */,
+				958108A12685DCC3006AC6DC /* View Model */,
+				958108A02685DCB9006AC6DC /* Coordinator */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		9581089F2685DC9B006AC6DC /* Photo Detail */ = {
+			isa = PBXGroup;
+			children = (
+				958108C92685F966006AC6DC /* View */,
+				958108C82685F960006AC6DC /* VIew Model */,
+				958108C72685F955006AC6DC /* Coordinator */,
+			);
+			path = "Photo Detail";
+			sourceTree = "<group>";
+		};
+		958108A02685DCB9006AC6DC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				958108CA2685F98E006AC6DC /* PhotosCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		958108A12685DCC3006AC6DC /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				958108CC2685FBA2006AC6DC /* PhotosViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		958108A22685DCCD006AC6DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				957935F0268648CC00F8A241 /* PhotosViewController.swift */,
+				957935F22686540300F8A241 /* PhotoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		958108A32685DE9F006AC6DC /* Business Logic Layer */ = {
+			isa = PBXGroup;
+			children = (
+				958108A42685DEBB006AC6DC /* Services */,
+				958108A52685DEC3006AC6DC /* Models */,
+			);
+			path = "Business Logic Layer";
+			sourceTree = "<group>";
+		};
+		958108A42685DEBB006AC6DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				958108C52685F433006AC6DC /* UnsplashPhotoService.swift */,
+				958108C32685F118006AC6DC /* DataLoadingService.swift */,
+				958108C12685F02D006AC6DC /* DataToImageConversionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		958108A52685DEC3006AC6DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				958108BF2685EEDB006AC6DC /* UnsplashPhoto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		958108A62685DEEA006AC6DC /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				958108A82685DF24006AC6DC /* Resources */,
+				958108A92685DFD1006AC6DC /* Utilities */,
+				958108AA2685DFDD006AC6DC /* Network */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		958108A72685DEFE006AC6DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				958108712685D4EF006AC6DC /* LaunchScreen.storyboard */,
+				958108742685D4EF006AC6DC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		958108A82685DF24006AC6DC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9581086F2685D4EF006AC6DC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		958108A92685DFD1006AC6DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				958108AB2685E00D006AC6DC /* Dimensions.swift */,
+				958108AD2685E0E9006AC6DC /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		958108AA2685DFDD006AC6DC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				958108B32685E5AB006AC6DC /* APIKeys */,
+				958108B42685E5B5006AC6DC /* BaseURLs */,
+				958108B52685E5CD006AC6DC /* Endpoints */,
+				958108B82685E63B006AC6DC /* Error */,
+				958108BB2685E697006AC6DC /* Network Client */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		958108B32685E5AB006AC6DC /* APIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				958108AF2685E53C006AC6DC /* APIKeys.swift */,
+			);
+			path = APIKeys;
+			sourceTree = "<group>";
+		};
+		958108B42685E5B5006AC6DC /* BaseURLs */ = {
+			isa = PBXGroup;
+			children = (
+				958108B12685E571006AC6DC /* BaseURLs.swift */,
+			);
+			path = BaseURLs;
+			sourceTree = "<group>";
+		};
+		958108B52685E5CD006AC6DC /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				958108B62685E5ED006AC6DC /* UnsplashEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		958108B82685E63B006AC6DC /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				958108B92685E667006AC6DC /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		958108BB2685E697006AC6DC /* Network Client */ = {
+			isa = PBXGroup;
+			children = (
+				958108BC2685E6C9006AC6DC /* NetworkClient.swift */,
+			);
+			path = "Network Client";
+			sourceTree = "<group>";
+		};
+		958108C72685F955006AC6DC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		958108C82685F960006AC6DC /* VIew Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "VIew Model";
+			sourceTree = "<group>";
+		};
+		958108C92685F966006AC6DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF291C8EFC5B3E004B556AAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47943FD914B5F182F464479A /* Pods-PhotosInfiniteScrolling.debug.xcconfig */,
+				AF73EB9DE5116DFB343F52FF /* Pods-PhotosInfiniteScrolling.release.xcconfig */,
+				A1FFE287123D642962BE791F /* Pods-PhotosInfiniteScrollingTests.debug.xcconfig */,
+				9E9C46B3B49B8F0CCEFFD4B5 /* Pods-PhotosInfiniteScrollingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC52115D8513457B6027A3ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25CF2580660E8CCD0C81F1A6 /* Pods_PhotosInfiniteScrolling.framework */,
+				2410BA884E0E9A10FA105798 /* Pods_PhotosInfiniteScrollingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +380,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9581088D2685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosInfiniteScrolling" */;
 			buildPhases = (
+				29D80DCB40012076860856D0 /* [CP] Check Pods Manifest.lock */,
 				9581085F2685D4ED006AC6DC /* Sources */,
 				958108602685D4ED006AC6DC /* Frameworks */,
 				958108612685D4ED006AC6DC /* Resources */,
+				83128C0DEF63221865A20B8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +399,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosInfiniteScrollingTests" */;
 			buildPhases = (
+				77DAB2C3A4B725D7DE19B3DF /* [CP] Check Pods Manifest.lock */,
 				958108752685D4EF006AC6DC /* Sources */,
 				958108762685D4EF006AC6DC /* Frameworks */,
 				958108772685D4EF006AC6DC /* Resources */,
@@ -222,12 +470,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29D80DCB40012076860856D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotosInfiniteScrolling-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77DAB2C3A4B725D7DE19B3DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotosInfiniteScrollingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83128C0DEF63221865A20B8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9581085F2685D4ED006AC6DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958108B02685E53C006AC6DC /* APIKeys.swift in Sources */,
+				957935F1268648CC00F8A241 /* PhotosViewController.swift in Sources */,
+				958108BD2685E6C9006AC6DC /* NetworkClient.swift in Sources */,
+				958108C02685EEDB006AC6DC /* UnsplashPhoto.swift in Sources */,
+				958108AE2685E0E9006AC6DC /* Extensions.swift in Sources */,
+				958108C62685F433006AC6DC /* UnsplashPhotoService.swift in Sources */,
+				958108CB2685F98E006AC6DC /* PhotosCoordinator.swift in Sources */,
+				958108B22685E571006AC6DC /* BaseURLs.swift in Sources */,
+				958108AC2685E00D006AC6DC /* Dimensions.swift in Sources */,
+				958108B72685E5ED006AC6DC /* UnsplashEndpoints.swift in Sources */,
+				957935F32686540300F8A241 /* PhotoCell.swift in Sources */,
+				958108CD2685FBA2006AC6DC /* PhotosViewModel.swift in Sources */,
 				9581089B2685D848006AC6DC /* Coordinator.swift in Sources */,
+				958108C42685F118006AC6DC /* DataLoadingService.swift in Sources */,
+				958108C22685F02D006AC6DC /* DataToImageConversionService.swift in Sources */,
+				958108BA2685E667006AC6DC /* NetworkError.swift in Sources */,
 				958108982685D6A9006AC6DC /* AppCoordinator.swift in Sources */,
 				958108672685D4ED006AC6DC /* AppDelegate.swift in Sources */,
 			);
@@ -381,6 +708,7 @@
 		};
 		9581088E2685D4EF006AC6DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47943FD914B5F182F464479A /* Pods-PhotosInfiniteScrolling.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,6 +728,7 @@
 		};
 		9581088F2685D4EF006AC6DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF73EB9DE5116DFB343F52FF /* Pods-PhotosInfiniteScrolling.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -419,6 +748,7 @@
 		};
 		958108912685D4EF006AC6DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FFE287123D642962BE791F /* Pods-PhotosInfiniteScrollingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -441,6 +771,7 @@
 		};
 		958108922685D4EF006AC6DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E9C46B3B49B8F0CCEFFD4B5 /* Pods-PhotosInfiniteScrollingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
