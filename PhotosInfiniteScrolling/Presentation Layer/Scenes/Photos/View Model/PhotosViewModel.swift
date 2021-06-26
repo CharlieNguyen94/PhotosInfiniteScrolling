@@ -63,6 +63,13 @@ final class PhotosViewModelImplementation: PhotosViewModel {
         self.dataToImageService = dataToImageService
         self.coordinator = coordinator
         
+        bindOnViewDidLoad()
+        bindOnWillDisplayCell()
+        bindOnDidEndDisplayingCell()
+        bindOnDidScrollToBottom()
+        bindPageNumber()
+        
+        bindOnDidChoosePhoto()
     }
     
     // MARK: - Bindings
@@ -114,6 +121,15 @@ final class PhotosViewModelImplementation: PhotosViewModel {
                 
                 self.imageRetrievedSuccess
                     .accept((image, index))
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindOnDidEndDisplayingCell() {
+        didEndDisplayingCellAtIndex
+            .subscribe(onNext: { [weak self] (index) in
+                guard let self = self else { return }
+                self.photoLoadingService.stopLoading(at: index)
             })
             .disposed(by: disposeBag)
     }

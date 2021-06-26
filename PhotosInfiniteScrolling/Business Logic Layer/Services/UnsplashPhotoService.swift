@@ -50,7 +50,7 @@ class UnsplashPhotosServiceImplementation: UnsplashPhotoService {
     
     func getPhoto(id: String) -> Observable<(UnsplashPhoto?, Error?)> {
         return self.networkClient.get(UnsplashPhoto.self,
-                                      "\(UnsplashEndpoints.getPhotoById) \(id)",
+                                      "\(UnsplashEndpoints.getPhotoById)\(id)",
                                       printURL: true)
     }
     

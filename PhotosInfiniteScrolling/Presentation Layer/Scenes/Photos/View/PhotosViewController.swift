@@ -13,13 +13,13 @@ import RxCocoa
 class PhotosViewController: UIViewController {
     
     // MARK: - Lifecycle Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        
-        
+        bindCollectionView()
+        bindLoadingState()
+        bindBottomActivityIndicator()
         
         viewModel.viewDidLoad.accept(())
         
@@ -40,7 +40,7 @@ class PhotosViewController: UIViewController {
     
     lazy var photosCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = .white
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseIdentifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -87,6 +87,90 @@ extension PhotosViewController {
                 }
             })
             .disposed(by: disposeBag)
+        
+        /// On image retrieval, 1. Stop activity indicator, 2. Animate cell, 3. Assign the image and 4. add it to cached images
+        viewModel.imageRetrievedSuccess
+            .customDebug(identifier: "imageRetrievedSuccess")
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] (image, index) in
+                if let cell = self?.photosCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? PhotoCell {
+                    
+                    // 1.
+                    cell.activityIndicator.stopAnimating()
+                    
+                    // 2.
+                    cell.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                    UIView.animate(withDuration: 0.25) {
+                        cell.transform = .identity
+                    }
+                    
+                    // 3.
+                    cell.imageView.image = image
+                    
+                    // 4.
+                    self?.cachedImages[index] = image
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        /// On image retrieval error, stop activity indicator and assign image to **nil**
+        viewModel.imageRetrievedError
+            .customDebug(identifier: "imageRetrievedError")
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] (index) in
+                if let cell = self?.photosCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? PhotoCell {
+                    cell.activityIndicator.stopAnimating()
+                    cell.imageView.image = nil
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        /// Cancelling image loading operation for a cell that dissapeared
+        photosCollectionView.rx.didEndDisplayingCell
+            .map { $0.1 }
+            .map { $0.item }
+            .bind(to: viewModel.didEndDisplayingCellAtIndex)
+            .disposed(by: disposeBag)
+        
+        photosCollectionView.rx.modelSelected(UnsplashPhoto.self)
+            .compactMap { $0.id }
+            .bind(to: viewModel.didChoosePhotoWithId)
+            .disposed(by: disposeBag)
+        
+        /// Infinite Scrolling
+        photosCollectionView.rx.willDisplayCell
+            .flatMap({ (_, indexPath) -> Observable<(section: Int, row: Int)> in
+                return Observable.of((indexPath.section, indexPath.row))
+            })
+            .filter { (section, row) in
+                let numberOfSections = self.photosCollectionView.numberOfSections
+                let numberOfItems = self.photosCollectionView.numberOfItems(inSection: section)
+                
+                return section == numberOfSections - 1 && row == numberOfItems - 1
+            }
+            .map { _ in () }
+            .bind(to: viewModel.didScrollToBottom)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindLoadingState() {
+        viewModel.isLoadingFirstPage
+            .observeOn(MainScheduler.instance)
+            .map({ (isloading) in
+                return isloading ? "Fetching..." : "Unsplash Photos"
+            })
+            .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindBottomActivityIndicator() {
+        viewModel.isLoadingAdditionalPhotos
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { [weak self] isLoading in
+                self?.updateConstraintForMode(loadingMorePhotos: isLoading)
+            })
+            .bind(to: bottomActivityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -96,7 +180,7 @@ extension PhotosViewController {
         if #available(iOS 13, *) {
             self.overrideUserInterfaceStyle = .light
         }
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
         self.view.addSubview(photosCollectionView)
         self.view.addSubview(bottomActivityIndicator)
         

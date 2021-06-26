@@ -10,6 +10,9 @@
 		91E4F9C48E3E6BF0BF5DD26B /* Pods_PhotosInfiniteScrolling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CF2580660E8CCD0C81F1A6 /* Pods_PhotosInfiniteScrolling.framework */; };
 		957935F1268648CC00F8A241 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F0268648CC00F8A241 /* PhotosViewController.swift */; };
 		957935F32686540300F8A241 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F22686540300F8A241 /* PhotoCell.swift */; };
+		957935F52686697B00F8A241 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F42686697B00F8A241 /* PhotoDetailViewController.swift */; };
+		957935F726866B8A00F8A241 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F626866B8A00F8A241 /* PhotoDetailViewModel.swift */; };
+		957935F92686738000F8A241 /* PhotoDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F82686738000F8A241 /* PhotoDetailCoordinator.swift */; };
 		958108672685D4ED006AC6DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108662685D4ED006AC6DC /* AppDelegate.swift */; };
 		958108702685D4EF006AC6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9581086F2685D4EF006AC6DC /* Assets.xcassets */; };
 		958108732685D4EF006AC6DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958108712685D4EF006AC6DC /* LaunchScreen.storyboard */; };
@@ -48,6 +51,9 @@
 		47943FD914B5F182F464479A /* Pods-PhotosInfiniteScrolling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrolling.debug.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling.debug.xcconfig"; sourceTree = "<group>"; };
 		957935F0268648CC00F8A241 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		957935F22686540300F8A241 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		957935F42686697B00F8A241 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		957935F626866B8A00F8A241 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		957935F82686738000F8A241 /* PhotoDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCoordinator.swift; sourceTree = "<group>"; };
 		958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosInfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958108662685D4ED006AC6DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9581086F2685D4EF006AC6DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -335,6 +341,7 @@
 		958108C72685F955006AC6DC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				957935F82686738000F8A241 /* PhotoDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -342,6 +349,7 @@
 		958108C82685F960006AC6DC /* VIew Model */ = {
 			isa = PBXGroup;
 			children = (
+				957935F626866B8A00F8A241 /* PhotoDetailViewModel.swift */,
 			);
 			path = "VIew Model";
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 		958108C92685F966006AC6DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				957935F42686697B00F8A241 /* PhotoDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,8 +549,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				958108B02685E53C006AC6DC /* APIKeys.swift in Sources */,
+				957935F52686697B00F8A241 /* PhotoDetailViewController.swift in Sources */,
 				957935F1268648CC00F8A241 /* PhotosViewController.swift in Sources */,
 				958108BD2685E6C9006AC6DC /* NetworkClient.swift in Sources */,
+				957935F92686738000F8A241 /* PhotoDetailCoordinator.swift in Sources */,
 				958108C02685EEDB006AC6DC /* UnsplashPhoto.swift in Sources */,
 				958108AE2685E0E9006AC6DC /* Extensions.swift in Sources */,
 				958108C62685F433006AC6DC /* UnsplashPhotoService.swift in Sources */,
@@ -552,6 +563,7 @@
 				957935F32686540300F8A241 /* PhotoCell.swift in Sources */,
 				958108CD2685FBA2006AC6DC /* PhotosViewModel.swift in Sources */,
 				9581089B2685D848006AC6DC /* Coordinator.swift in Sources */,
+				957935F726866B8A00F8A241 /* PhotoDetailViewModel.swift in Sources */,
 				958108C42685F118006AC6DC /* DataLoadingService.swift in Sources */,
 				958108C22685F02D006AC6DC /* DataToImageConversionService.swift in Sources */,
 				958108BA2685E667006AC6DC /* NetworkError.swift in Sources */,
@@ -714,7 +726,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27HQ4FLX4;
-				INFOPLIST_FILE = PhotosInfiniteScrolling/Info.plist;
+				INFOPLIST_FILE = "PhotosInfiniteScrolling/Supporting FIles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -734,7 +747,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27HQ4FLX4;
-				INFOPLIST_FILE = PhotosInfiniteScrolling/Info.plist;
+				INFOPLIST_FILE = "PhotosInfiniteScrolling/Supporting FIles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
