@@ -46,8 +46,9 @@ class PhotoDetailViewController: UIViewController {
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.numberOfLines = 0
+        label.font = UIFont(name: "ArialMT", size: 26)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,9 +67,13 @@ extension PhotoDetailViewController {
         viewModel.imageRetrievedSucceess
             .observeOn(MainScheduler.instance)
             .do(onNext: { [weak self] _ in
-                self?.photoImageView.alpha = 0
+//                self?.photoImageView.alpha = 0
+//                UIView.animate(withDuration: 0.25) {
+//                    self?.photoImageView.alpha = 1.0
+//                }
+                self?.photoImageView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                 UIView.animate(withDuration: 0.25) {
-                    self?.photoImageView.alpha = 1.0
+                    self?.photoImageView.transform = .identity
                 }
             })
             .bind(to: photoImageView.rx.image)
@@ -90,6 +95,12 @@ extension PhotoDetailViewController {
     func bindDescriptionLabel() {
         viewModel.description
             .observeOn(MainScheduler.instance)
+            .do(onNext: { [weak self] _ in
+                self?.descriptionLabel.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                UIView.animate(withDuration: 0.25) {
+                    self?.descriptionLabel.transform = .identity
+                }
+            })
             .bind(to: descriptionLabel.rx.text)
             .disposed(by: disposeBag)
     }
