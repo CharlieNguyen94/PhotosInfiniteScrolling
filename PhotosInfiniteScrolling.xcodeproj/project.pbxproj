@@ -16,7 +16,7 @@
 		958108672685D4ED006AC6DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108662685D4ED006AC6DC /* AppDelegate.swift */; };
 		958108702685D4EF006AC6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9581086F2685D4EF006AC6DC /* Assets.xcassets */; };
 		958108732685D4EF006AC6DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958108712685D4EF006AC6DC /* LaunchScreen.storyboard */; };
-		9581087E2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581087D2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift */; };
+		9581087E2685D4EF006AC6DC /* PhotosViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581087D2685D4EF006AC6DC /* PhotosViewModelTests.swift */; };
 		958108982685D6A9006AC6DC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108972685D6A9006AC6DC /* AppCoordinator.swift */; };
 		9581089B2685D848006AC6DC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581089A2685D848006AC6DC /* Coordinator.swift */; };
 		958108AC2685E00D006AC6DC /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108AB2685E00D006AC6DC /* Dimensions.swift */; };
@@ -59,8 +59,8 @@
 		9581086F2685D4EF006AC6DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		958108722685D4EF006AC6DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958108742685D4EF006AC6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		958108792685D4EF006AC6DC /* PhotosInfiniteScrollingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosInfiniteScrollingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9581087D2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosInfiniteScrollingTests.swift; sourceTree = "<group>"; };
+		958108792685D4EF006AC6DC /* PhotosViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9581087D2685D4EF006AC6DC /* PhotosViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModelTests.swift; sourceTree = "<group>"; };
 		9581087F2685D4EF006AC6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958108972685D6A9006AC6DC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9581089A2685D848006AC6DC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */,
-				958108792685D4EF006AC6DC /* PhotosInfiniteScrollingTests.xctest */,
+				958108792685D4EF006AC6DC /* PhotosViewModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 		9581087C2685D4EF006AC6DC /* PhotosInfiniteScrollingTests */ = {
 			isa = PBXGroup;
 			children = (
-				9581087D2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift */,
+				9581087D2685D4EF006AC6DC /* PhotosViewModelTests.swift */,
 				9581087F2685D4EF006AC6DC /* Info.plist */,
 			);
 			path = PhotosInfiniteScrollingTests;
@@ -404,9 +404,9 @@
 			productReference = 958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */;
 			productType = "com.apple.product-type.application";
 		};
-		958108782685D4EF006AC6DC /* PhotosInfiniteScrollingTests */ = {
+		958108782685D4EF006AC6DC /* PhotosViewModelTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosInfiniteScrollingTests" */;
+			buildConfigurationList = 958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosViewModelTests" */;
 			buildPhases = (
 				77DAB2C3A4B725D7DE19B3DF /* [CP] Check Pods Manifest.lock */,
 				958108752685D4EF006AC6DC /* Sources */,
@@ -418,9 +418,9 @@
 			dependencies = (
 				9581087B2685D4EF006AC6DC /* PBXTargetDependency */,
 			);
-			name = PhotosInfiniteScrollingTests;
+			name = PhotosViewModelTests;
 			productName = PhotosInfiniteScrollingTests;
-			productReference = 958108792685D4EF006AC6DC /* PhotosInfiniteScrollingTests.xctest */;
+			productReference = 958108792685D4EF006AC6DC /* PhotosViewModelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -455,7 +455,7 @@
 			projectRoot = "";
 			targets = (
 				958108622685D4ED006AC6DC /* PhotosInfiniteScrolling */,
-				958108782685D4EF006AC6DC /* PhotosInfiniteScrollingTests */,
+				958108782685D4EF006AC6DC /* PhotosViewModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -576,7 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9581087E2685D4EF006AC6DC /* PhotosInfiniteScrollingTests.swift in Sources */,
+				9581087E2685D4EF006AC6DC /* PhotosViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27HQ4FLX4;
 				INFOPLIST_FILE = PhotosInfiniteScrollingTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,7 +792,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27HQ4FLX4;
 				INFOPLIST_FILE = PhotosInfiniteScrollingTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -827,7 +827,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosInfiniteScrollingTests" */ = {
+		958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosViewModelTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				958108912685D4EF006AC6DC /* Debug */,
