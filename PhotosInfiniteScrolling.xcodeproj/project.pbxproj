@@ -127,7 +127,7 @@
 		958108652685D4ED006AC6DC /* PhotosInfiniteScrolling */ = {
 			isa = PBXGroup;
 			children = (
-				958108962685D626006AC6DC /* ApplicationLayer */,
+				958108962685D626006AC6DC /* Application Layer */,
 				958108992685D830006AC6DC /* Presentation Layer */,
 				958108A32685DE9F006AC6DC /* Business Logic Layer */,
 				958108A62685DEEA006AC6DC /* Core Layer */,
@@ -146,13 +146,13 @@
 			path = PhotosInfiniteScrollingTests;
 			sourceTree = "<group>";
 		};
-		958108962685D626006AC6DC /* ApplicationLayer */ = {
+		958108962685D626006AC6DC /* Application Layer */ = {
 			isa = PBXGroup;
 			children = (
 				958108662685D4ED006AC6DC /* AppDelegate.swift */,
 				958108972685D6A9006AC6DC /* AppCoordinator.swift */,
 			);
-			path = ApplicationLayer;
+			path = "Application Layer";
 			sourceTree = "<group>";
 		};
 		958108992685D830006AC6DC /* Presentation Layer */ = {
