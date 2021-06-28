@@ -13,6 +13,7 @@
 		957935F52686697B00F8A241 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F42686697B00F8A241 /* PhotoDetailViewController.swift */; };
 		957935F726866B8A00F8A241 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F626866B8A00F8A241 /* PhotoDetailViewModel.swift */; };
 		957935F92686738000F8A241 /* PhotoDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957935F82686738000F8A241 /* PhotoDetailCoordinator.swift */; };
+		95793609268A0D7300F8A241 /* PhotoDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95793608268A0D7300F8A241 /* PhotoDetailViewModelTests.swift */; };
 		958108672685D4ED006AC6DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958108662685D4ED006AC6DC /* AppDelegate.swift */; };
 		958108702685D4EF006AC6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9581086F2685D4EF006AC6DC /* Assets.xcassets */; };
 		958108732685D4EF006AC6DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958108712685D4EF006AC6DC /* LaunchScreen.storyboard */; };
@@ -54,12 +55,13 @@
 		957935F42686697B00F8A241 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		957935F626866B8A00F8A241 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
 		957935F82686738000F8A241 /* PhotoDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCoordinator.swift; sourceTree = "<group>"; };
+		95793608268A0D7300F8A241 /* PhotoDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModelTests.swift; sourceTree = "<group>"; };
 		958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosInfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958108662685D4ED006AC6DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9581086F2685D4EF006AC6DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		958108722685D4EF006AC6DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958108742685D4EF006AC6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		958108792685D4EF006AC6DC /* PhotosViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		958108792685D4EF006AC6DC /* PhotosInfiniteScrollingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosInfiniteScrollingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9581087D2685D4EF006AC6DC /* PhotosViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModelTests.swift; sourceTree = "<group>"; };
 		9581087F2685D4EF006AC6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958108972685D6A9006AC6DC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */,
-				958108792685D4EF006AC6DC /* PhotosViewModelTests.xctest */,
+				958108792685D4EF006AC6DC /* PhotosInfiniteScrollingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				9581087D2685D4EF006AC6DC /* PhotosViewModelTests.swift */,
+				95793608268A0D7300F8A241 /* PhotoDetailViewModelTests.swift */,
 				9581087F2685D4EF006AC6DC /* Info.plist */,
 			);
 			path = PhotosInfiniteScrollingTests;
@@ -404,9 +407,9 @@
 			productReference = 958108632685D4ED006AC6DC /* PhotosInfiniteScrolling.app */;
 			productType = "com.apple.product-type.application";
 		};
-		958108782685D4EF006AC6DC /* PhotosViewModelTests */ = {
+		958108782685D4EF006AC6DC /* PhotosInfiniteScrollingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosViewModelTests" */;
+			buildConfigurationList = 958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosInfiniteScrollingTests" */;
 			buildPhases = (
 				77DAB2C3A4B725D7DE19B3DF /* [CP] Check Pods Manifest.lock */,
 				958108752685D4EF006AC6DC /* Sources */,
@@ -418,9 +421,9 @@
 			dependencies = (
 				9581087B2685D4EF006AC6DC /* PBXTargetDependency */,
 			);
-			name = PhotosViewModelTests;
+			name = PhotosInfiniteScrollingTests;
 			productName = PhotosInfiniteScrollingTests;
-			productReference = 958108792685D4EF006AC6DC /* PhotosViewModelTests.xctest */;
+			productReference = 958108792685D4EF006AC6DC /* PhotosInfiniteScrollingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -455,7 +458,7 @@
 			projectRoot = "";
 			targets = (
 				958108622685D4ED006AC6DC /* PhotosInfiniteScrolling */,
-				958108782685D4EF006AC6DC /* PhotosViewModelTests */,
+				958108782685D4EF006AC6DC /* PhotosInfiniteScrollingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -576,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95793609268A0D7300F8A241 /* PhotoDetailViewModelTests.swift in Sources */,
 				9581087E2685D4EF006AC6DC /* PhotosViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,7 +831,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosViewModelTests" */ = {
+		958108902685D4EF006AC6DC /* Build configuration list for PBXNativeTarget "PhotosInfiniteScrollingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				958108912685D4EF006AC6DC /* Debug */,
