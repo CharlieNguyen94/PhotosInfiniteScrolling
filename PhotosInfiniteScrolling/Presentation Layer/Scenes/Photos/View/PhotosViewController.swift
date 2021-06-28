@@ -190,10 +190,10 @@ extension PhotosViewController {
         NSLayoutConstraint.activate([
             photosCollectionView.leftAnchor
                 .constraint(equalTo: self.view.leftAnchor),
-            photosCollectionView.rightAnchor
-                .constraint(equalTo: self.view.rightAnchor),
             photosCollectionView.topAnchor
                 .constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            photosCollectionView.rightAnchor
+                .constraint(equalTo: self.view.rightAnchor),
             bottomConstraint!
         ])
         

@@ -13,5 +13,5 @@ struct Dimensions {
     
     static let photoItemSize = CGSize(
         width: Dimensions.screenWidth * 0.45,
-        height: Dimensions.screenHeight * 0.45)
+        height: Dimensions.screenWidth * 0.45)
 }

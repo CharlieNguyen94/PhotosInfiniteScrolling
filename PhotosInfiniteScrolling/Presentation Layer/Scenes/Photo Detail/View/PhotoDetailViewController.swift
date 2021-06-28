@@ -118,7 +118,7 @@ extension PhotoDetailViewController {
             photoImageView.leftAnchor
                 .constraint(equalTo: self.view.leftAnchor),
             photoImageView.topAnchor
-                .constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+                .constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
             photoImageView.rightAnchor
                 .constraint(equalTo: self.view.rightAnchor),
             photoImageView.heightAnchor
