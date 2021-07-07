@@ -79,6 +79,7 @@
 		958108C52685F433006AC6DC /* UnsplashPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoService.swift; sourceTree = "<group>"; };
 		958108CA2685F98E006AC6DC /* PhotosCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCoordinator.swift; sourceTree = "<group>"; };
 		958108CC2685FBA2006AC6DC /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		958162C02695B4E6005E3D6C /* Pods-PhotosInfiniteScrollingTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Pods-PhotosInfiniteScrollingTests.xctestplan"; sourceTree = "<group>"; };
 		9E9C46B3B49B8F0CCEFFD4B5 /* Pods-PhotosInfiniteScrollingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrollingTests.release.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrollingTests/Pods-PhotosInfiniteScrollingTests.release.xcconfig"; sourceTree = "<group>"; };
 		A1FFE287123D642962BE791F /* Pods-PhotosInfiniteScrollingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrollingTests.debug.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrollingTests/Pods-PhotosInfiniteScrollingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF73EB9DE5116DFB343F52FF /* Pods-PhotosInfiniteScrolling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosInfiniteScrolling.release.xcconfig"; path = "Target Support Files/Pods-PhotosInfiniteScrolling/Pods-PhotosInfiniteScrolling.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		9581085A2685D4ED006AC6DC = {
 			isa = PBXGroup;
 			children = (
+				958162C02695B4E6005E3D6C /* Pods-PhotosInfiniteScrollingTests.xctestplan */,
 				958108652685D4ED006AC6DC /* PhotosInfiniteScrolling */,
 				9581087C2685D4EF006AC6DC /* PhotosInfiniteScrollingTests */,
 				958108642685D4ED006AC6DC /* Products */,
