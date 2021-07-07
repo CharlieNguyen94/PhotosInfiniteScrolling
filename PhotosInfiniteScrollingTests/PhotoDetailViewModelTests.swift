@@ -10,7 +10,7 @@ import RxSwift
 
 @testable import PhotosInfiniteScrolling
 
-// Unit Testing PhotoDetailViewModel
+// Unit Testing For PhotoDetailViewModel
 
 class PhotoDetailViewModelTests: XCTestCase {
 
