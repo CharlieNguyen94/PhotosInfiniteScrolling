@@ -1,4 +1,4 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: objective-c
+xcode_workspace: PhotosInfiniteScrolling.xcworkspace # path to your xcodeproj folder
+xcode_scheme: PhotosInfiniteScrollingTests
+xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
