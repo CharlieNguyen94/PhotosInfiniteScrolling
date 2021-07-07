@@ -9,7 +9,7 @@ import XCTest
 import RxSwift
 @testable import PhotosInfiniteScrolling
 
-// Unit Testing For PhotosViewModel
+// Unit Testing For PhotosViewModel With RxSwift
 
 class PhotosViewModelTests: XCTestCase {
     
