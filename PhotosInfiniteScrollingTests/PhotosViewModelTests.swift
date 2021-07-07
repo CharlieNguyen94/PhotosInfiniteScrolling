@@ -9,6 +9,8 @@ import XCTest
 import RxSwift
 @testable import PhotosInfiniteScrolling
 
+// Unit Testing PhotosViewModel
+
 class PhotosViewModelTests: XCTestCase {
     
     // MARK: - System Under Test
