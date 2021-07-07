@@ -1,4 +1,5 @@
 language: objective-c
 osx_image: xcode12.5
-script:
-- fastlane scan
+xcode_workspace: PhotosInfiniteScrolling.xcworkspace # path to your xcodeproj folder
+xcode_scheme: PhotosInfiniteScrolling
+xcode_destination: platform=iOS Simulator,OS=14.3,name=iPhone 12 Pro
