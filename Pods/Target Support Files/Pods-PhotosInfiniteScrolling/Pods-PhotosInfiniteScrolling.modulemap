@@ -1,0 +1,6 @@
+framework module Pods_PhotosInfiniteScrolling {
+  umbrella header "Pods-PhotosInfiniteScrolling-umbrella.h"
+
+  export *
+  module * { export * }
+}

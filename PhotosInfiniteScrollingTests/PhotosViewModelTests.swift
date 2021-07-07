@@ -209,6 +209,4 @@ class PhotosViewModelTests: XCTestCase {
         
         wait(for: [expectation], timeout: 2.0)
     }
-    
-    
 }
