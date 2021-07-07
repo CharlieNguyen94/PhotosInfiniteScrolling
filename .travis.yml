@@ -1,5 +1,5 @@
 language: objective-c
 osx_image: xcode12.5
 xcode_workspace: PhotosInfiniteScrolling.xcworkspace # path to your xcodeproj folder
-xcode_scheme: PhotosInfiniteScrollingTests
+xcode_scheme: Pods-PhotosInfiniteScrollingTests
 xcode_destination: platform=iOS Simulator,OS=14.3,name=iPhone 12 Pro
